@@ -75,6 +75,8 @@ The main entry point is:
 python mar_fl.py
 ```
 
+Reproducibility can hereby be controlled by fixing the random seed via the `-sd` flag.
+
 ---
 
 ## Monitoring
