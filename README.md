@@ -94,10 +94,13 @@ If you use this code, please cite:
 
 ```bibtex
 @inproceedings{mulitze2025marfl,
-  title={MAR-FL: Towards Communication-Efficient Peer-to-Peer Federated Learning},
-  author={Mulitze, Felix},
-  booktitle={NeurIPS 2025 AI4NextG Workshop},
-  year={2025}
+  title     = {MAR-FL: A Communication Efficient Peer-to-Peer Federated Learning System},
+  author    = {Mulitze, Felix and Woisetschl{\"a}ger, Herbert and Jacobsen, Hans-Arno},
+  booktitle = {NeurIPS 2025 AI4NextG Workshop},
+  year      = {2025},
+  eprint    = {2512.05234},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
 }
 ```
 
