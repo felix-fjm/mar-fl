@@ -49,3 +49,74 @@ It is recommended to use a **virtual environment**:
 python3.8 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
+```
+
+Due to various dependency constraints, install packages **in the following order**:
+
+```bash
+pip install hivemind
+pip install psutil
+pip uninstall torch hivemind protobuf -y
+pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+pip install hivemind==1.1.9
+pip install protobuf==3.20.1
+pip install wandb
+pip install matplotlib
+pip install transformers datasets
+```
+
+---
+
+## Running MAR-FL
+
+The main entry point is:
+
+```bash
+python mar_fl.py
+```
+
+---
+
+## Monitoring
+
+MAR-FL includes:
+
+- Shared-memory usage monitoring (`/dev/shm`)
+- Optional logging via **Weights & Biases**
+
+Shared memory usage is periodically logged to avoid memory exhaustion during long-running decentralized training.
+
+---
+
+## Citation
+
+If you use this code, please cite:
+
+```bibtex
+@inproceedings{mulitze2025marfl,
+  title={MAR-FL: Towards Communication-Efficient Peer-to-Peer Federated Learning},
+  author={Mulitze, Felix},
+  booktitle={NeurIPS 2025 AI4NextG Workshop},
+  year={2025}
+}
+```
+
+---
+
+## License
+
+This project is released under the MIT License.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
