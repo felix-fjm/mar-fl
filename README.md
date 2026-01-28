@@ -11,25 +11,25 @@ The system was developed as part of a first-author publication at **NeurIPS 2025
 MAR-FL implements a fully decentralized Federated Learning architecture based on:
 
 - Iterative group-based aggregation (**Moshpit All-Reduce**)
-- Peer-to-peer synchronization without a central coordinator
+- Peer-to-peer synchronization without a central coordinator (**Distributed Hash Tables**)
 - Optional and fully decentralized **Knowledge Distillation**
 - Optional and fully decentralized **Differential Privacy**
 - Robustness to peer churn and partial participation
 
-The system is designed for execution on distributed environments (e.g. Slurm-based HPC clusters) and supports GPU-accelerated training.
+The system is designed for execution in multi-process, distributed computing environments (e.g. Slurm-managed HPC clusters), where peer processes are emulated and optionally pinned to dedicated CPU cores or GPUs to approximate decentralized execution.
 
 ---
 
 ## Repository Structure
 
-- `mar_fl.py` — Main entry point  
-- `config_setup.py` — Experiment and runtime configuration  
-- `ml_tasks.py` — ML task definitions  
-- `moshpit_all_reduce.py` — Group-based aggregation logic  
-- `peer_aggregation_logic.py` — Peer-side aggregation  
-- `peer_synchronization.py` — Decentralized peer synchronization  
-- `differential_privacy.py` — DP mechanisms  
-- `shared_memory_handling.py` — Shared-memory monitoring and cleanup  
+- `mar_fl.py` - Main script: experiment launcher, peer-process dispatcher, and emulated peer runtime.
+- `config_setup.py` - Configuration (args/defaults), run setup, reproducibility utilities.
+- `ml_tasks.py` - Task definitions plus training/evaluation loops (models, datasets, loss, metrics).
+- `moshpit_all_reduce.py` - Iterative group-based aggregation (Moshpit All-Reduce) primitives.
+- `peer_aggregation_logic.py` - Peer-side aggregation logic (group formation / update application).
+- `peer_synchronization.py` - P2P coordination and state sync (peer discovery, rendezvous/scheduling).
+- `differential_privacy.py` - Differential Privacy mechanisms (clipping/noise) integrated into training/aggregation.
+- `shared_memory_handling.py` - Shared-memory monitoring and cleanup utilities (`/dev/shm`).
 
 ---
 
