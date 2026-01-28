@@ -2,7 +2,7 @@
 
 This repository contains the reference implementation for **MAR-FL**, a fully decentralized peer-to-peer Federated Learning system with communication-efficient aggregation, designed to be robust under partial participation and peer churn.
 
-The system was developed as part of a first-author publication at **NeurIPS 2025 – AI4NextG Workshop (Poster)**.
+The system was developed as part of a first-author publication at **NeurIPS 2025 – AI4NextG Workshop (Poster)** ([arXiv:2512.05234](https://arxiv.org/abs/2512.05234)).
 
 ---
 
