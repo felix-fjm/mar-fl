@@ -16,7 +16,7 @@ MAR-FL implements a fully decentralized Federated Learning architecture based on
 - Optional and fully decentralized **Differential Privacy**
 - Robustness to peer churn and partial participation
 
-The system is designed for execution in multi-process, distributed computing environments (e.g. Slurm-managed HPC clusters), where peer processes are emulated and optionally pinned to dedicated CPU cores or GPUs to approximate decentralized execution.
+The system is designed for execution in multi-process, distributed computing environments (e.g., Slurm-managed HPC clusters), where peer processes are emulated and optionally pinned to dedicated CPU cores or GPUs to approximate decentralized execution.
 
 ---
 
@@ -75,7 +75,7 @@ The main entry point is:
 python mar_fl.py
 ```
 
-Reproducibility can hereby be controlled by fixing the random seed via the `-sd` flag.
+Reproducibility can hereby be controlled by fixing the random seed via the `--sd` flag.
 
 ---
 
